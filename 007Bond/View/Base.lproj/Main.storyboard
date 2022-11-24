@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_07Bond" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sean_connery" translatesAutoresizingMaskIntoConstraints="NO" id="DUA-cr-LMH">
+                                <rect key="frame" x="0.0" y="94" width="393" height="724"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLa-Dy-Ffe">
+                                <rect key="frame" x="161" y="783" width="70.333333333333343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="C4z-IQ-ks5"/>
+                                    <constraint firstAttribute="height" constant="35" id="ciZ-GG-ncr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pause"/>
+                                <connections>
+                                    <action selector="soundAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xJi-wd-Kqx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DUA-cr-LMH" secondAttribute="bottom" id="3BC-Hm-XEc"/>
+                            <constraint firstItem="DUA-cr-LMH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="9dd-o1-CXO"/>
+                            <constraint firstItem="DUA-cr-LMH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dlm-jA-VpC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DUA-cr-LMH" secondAttribute="trailing" id="ga1-0b-QPg"/>
+                            <constraint firstItem="zLa-Dy-Ffe" firstAttribute="centerX" secondItem="DUA-cr-LMH" secondAttribute="centerX" id="oCX-jl-024"/>
+                            <constraint firstItem="zLa-Dy-Ffe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vRn-2Y-Fl2"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5bV-iF-dCA" appends="YES" id="g04-aM-7le"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="bondImageView" destination="DUA-cr-LMH" id="dtB-oJ-Zsi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="5bV-iF-dCA">
+                    <connections>
+                        <action selector="bondTap:" destination="BYZ-38-t0r" id="ME5-xO-BbS"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-25" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sean_connery" width="138" height="750"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
